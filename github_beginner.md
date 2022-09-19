@@ -47,5 +47,8 @@ https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
 4. 上面第一步的图我们看到 .DS_Store也被提交了，有时候一些文件大，也不适合提交。因此我们希望提交代码的时候自动忽略一些文件，需要用到 ***.gitignore***文件。
    - 在根目录创建`.gitignore`文件,
    - 然后直接把要忽略的文件名填进去，Git就会自动忽略这些文件。
-  参考：https://www.jianshu.com/p/ea6341224e89
-   
+  语法参考：https://www.jianshu.com/p/ea6341224e89
+5. 为了避免提交时和remote的冲突，提交之前要先g`git fetch`
+   ![](assets/ignore.jpg)
+
+### 待续...
