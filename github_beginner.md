@@ -24,4 +24,21 @@ https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
    终端到代码文件夹下运行 `git init`
    创建成功后，文件夹会变色，绿色代表新建的文件夹，同时代码文件夹下也会出现 *.git* 文件夹
    ![](assets/initial%20local%20repository.jpg)
-1. 
+1. 接下来代码就开始旅行了，**第一步**放入暂存区
+   `git add .` 要注意*add*后跟一个space, 这行代码运行后没有任何输出
+   但可以`git status`查看更新的文件
+   ![](assets/gitadd.jpg)
+2. **第二步**将暂存区的文件提交到本地仓库
+   `git commit -m '提交信息'`
+3. **第三步**将本地文件提交到远程GitHub
+   - 但如果是第一次提交，还需要以下步骤：
+     1）到GitHub上创建一个仓库
+     ![](assets/creatgithub.jpg)
+     2）新创建的项目会给一些信息，拿到SSH
+     ![](assets/tutorialGitHub.jpg)
+    3）把刚刚GitHub教程中的代码`git remote add origin git@github.com:HiiSong/Notes.git `拷贝到命令行中运行，没有输出
+    4）提交`git push -u origin master`,这里要注意，原本教程中给的是*main*,我运行报错，改为*master*后成功。暂时不清楚原因
+    ![](assets/pushgithub.jpg)
+
+### tips
+核心步骤就上面的，第一次提交之后的每次提交，只需要：`git add .` -> `git commit -m '提交信息'` -> `git push -u origin`
